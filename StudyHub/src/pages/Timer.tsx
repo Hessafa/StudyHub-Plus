@@ -1,4 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
+import ReactDOM from 'react-dom/client';
+import './timer.css';
+
+const rootElement = document.createElement('div');
+document.body.appendChild(rootElement);
 
 const API_BASE = 'http://localhost:8000/api';
 
@@ -71,5 +76,5 @@ const Timer = () => {
     </div>
   );
 };
-
-export default Timer;
+const root = ReactDOM.createRoot(rootElement);
+root.render(<Timer />);
