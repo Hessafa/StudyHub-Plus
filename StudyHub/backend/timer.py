@@ -33,6 +33,13 @@ def restart_timer():
     state["running"] = False
     return {"ok": True}
 
+@app.get("/api/progress")
+def get_progress():
+    total = 25 * 60  # total seconds
+    done = total - state["seconds"]
+    percent = int((done / total) * 100)
+    return {"progress": percent}
+
 @app.post("/api/tick")
 def tick():
     if state["running"] and state["seconds"] > 0:
