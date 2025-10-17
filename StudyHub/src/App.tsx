@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login"; 
 import Register from "./pages/Register"; 
 import timer from "./timer";
-import './styles.css';  
+import './timer.css';  
 
 export default function App() {
   return (
