@@ -1,0 +1,45 @@
+.result-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.result-card {
+  background: #fdf3f3; /* soft red-pink */
+  padding: 30px;
+  border-radius: 16px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.result-card h2 {
+  color: #6b4ce6;
+  margin-bottom: 10px;
+}
+
+.result-card span {
+  color: #e64b4b;
+}
+
+.result-card p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 15px 0;
+}
+
+.retake-btn {
+  background: linear-gradient(90deg, #f7a8a8, #a7c7e7);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.retake-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #a7c7e7, #c9a7e7);
+}
