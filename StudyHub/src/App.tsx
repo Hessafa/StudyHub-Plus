@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // Existing pages
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Timer from "./timer"; // Capitalized: React components must start with uppercase
+import Timer from "./timer"; // Make sure Timer is capitalized
 
 // Survey components
 import SurveyForm from "./components/SurveyForm";
@@ -19,20 +19,34 @@ export default function App() {
   return (
     <div className="App">
       <Routes>
-        {/*  Existing routes */}
+        {/* Existing routes */}
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/timer" element={<Timer />} />
 
-        {/*  New survey route */}
+        {/* Survey route */}
         <Route
           path="/survey"
           element={
-            !result ? (
-              <SurveyForm setResult={setResult} />
-            ) : (
-              <Result result={result} setResult={setResult} />
-            )
+            <div>
+              <header>
+                <h1> ADHD Self-Assessment Survey</h1>
+                <p>Reflect on your focus, organization, and energy patterns.</p>
+              </header>
+
+              {!result ? (
+                <SurveyForm setResult={setResult} />
+              ) : (
+                <Result result={result} setResult={setResult} />
+              )}
+
+              <footer>
+                <small>
+                  ⚠️ This is not a diagnosis. Please consult a licensed clinician for
+                  professional guidance.
+                </small>
+              </footer>
+            </div>
           }
         />
       </Routes>
