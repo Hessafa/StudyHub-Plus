@@ -154,3 +154,42 @@
   transform: scale(1.05);
   background: linear-gradient(90deg, #a7c7e7, #c9a7e7);
 }
+
+/* Focus Mode Styles */
+.focus-mode {
+  background: #f4f8ff;
+  transition: background 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.95);
+}
+
+.focus-mode * {
+  transition: opacity 0.5s ease;
+}
+
+.focus-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(90deg, #a7c7e7, #c9a7e7);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.focus-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Dim non-survey pages slightly when Focus Mode is active */
+.focus-mode:not(.survey-active) {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
