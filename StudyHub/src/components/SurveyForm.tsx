@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./SurveyForm.css";
 
 const questions = [
   "How often do you have trouble focusing on schoolwork or lectures?",
@@ -33,16 +34,29 @@ export default function SurveyForm({ setResult }: { setResult: (r: any) => void 
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ textAlign: "left" }}>
+    <form onSubmit={handleSubmit} className="survey-form">
       {questions.map((q, i) => (
-        <div key={i} style={{ marginBottom: "15px" }}>
-          <p><strong>{i + 1}. {q}</strong></p>
-          <label><input type="radio" name={`q${i}`} value="3" onChange={() => handleChange(i, 3)} /> Often</label>{" "}
-          <label><input type="radio" name={`q${i}`} value="2" onChange={() => handleChange(i, 2)} /> Sometimes</label>{" "}
-          <label><input type="radio" name={`q${i}`} value="1" onChange={() => handleChange(i, 1)} /> Rarely</label>
+        <div key={i} className="question-card">
+          <p className="question-text">
+            <span>{i + 1}.</span> {q}
+          </p>
+          <div className="options">
+            <label className="option">
+              <input type="radio" name={`q${i}`} value="3" onChange={() => handleChange(i, 3)} />
+              <span>Often</span>
+            </label>
+            <label className="option">
+              <input type="radio" name={`q${i}`} value="2" onChange={() => handleChange(i, 2)} />
+              <span>Sometimes</span>
+            </label>
+            <label className="option">
+              <input type="radio" name={`q${i}`} value="1" onChange={() => handleChange(i, 1)} />
+              <span>Rarely</span>
+            </label>
+          </div>
         </div>
       ))}
-      <button type="submit">Submit</button>
+      <button type="submit" className="submit-btn">Submit</button>
     </form>
   );
 }
