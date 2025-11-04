@@ -1,3 +1,4 @@
+/* Khluood Vite styles — unchanged */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,117 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*  --- Added Styles for Survey Page (non-conflicting) --- */
+
+.survey-header {
+  color: #6b4ce6;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.survey-subtext {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.survey-question {
+  background: #faf8ff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid #c9a7e7;
+  transition: background 0.3s ease;
+}
+
+.survey-question:hover {
+  background: #f3f0ff;
+}
+
+.survey-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.survey-option {
+  background-color: #f0f4ff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: 1px solid transparent;
+}
+
+.survey-option:hover {
+  background-color: #e0edff;
+  transform: scale(1.05);
+}
+
+.survey-submit {
+  background: linear-gradient(90deg, #a7c7e7, #c9a7e7);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.survey-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-result {
+  background: #fdf3f3;
+  padding: 30px;
+  border-radius: 16px;
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.survey-result h2 {
+  color: #6b4ce6;
+  margin-bottom: 10px;
+}
+
+.survey-result span {
+  color: #e64b4b;
+  font-weight: 600;
+}
+
+.survey-result p {
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+.survey-retake {
+  background: linear-gradient(90deg, #f7a8a8, #a7c7e7);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.survey-retake:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #a7c7e7, #c9a7e7);
 }
